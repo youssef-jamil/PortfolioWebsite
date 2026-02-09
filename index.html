@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Syntax Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-image">
+                    <img src="./Image/PersonImage.jpg""
+                        alt=" Profile" id="profile-img"
+                        onerror="this.src='https://ui-avatars.com/api/?name=Portfolio&size=500&background=f4b400&color=0d0d0d'">
+                </div>
+                <h1 class="hero-title" id="hero-name">Loading...</h1>
+                <p class="hero-subtitle" id="hero-title">Loading...</p>
+                <p class="hero-bio" id="hero-bio">Loading...</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">شوف أعمالي</a>
+                    <a href="#contact" class="btn btn-secondary">تواصل معايا</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg-shape"></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">الخدمات اللي بقدمها</h2>
+            <div class="services-grid" id="services-grid">
+                <!-- Services will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">أعمالي</h2>
+            <div class="portfolio-grid" id="portfolio-grid">
+                <!-- Portfolio items will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">عني</h2>
+            <div class="about-content">
+                <p class="about-text" id="about-text">Loading...</p>
+                <div class="skills-container" id="skills-container">
+                    <!-- Skills will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">آراء العملاء</h2>
+            <div class="testimonials-grid" id="testimonials-grid">
+                <!-- Testimonials will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">تواصل معايا</h2>
+            <div class="contact-content">
+                <div class="contact-links" id="contact-links">
+                    <!-- Contact links will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolio-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

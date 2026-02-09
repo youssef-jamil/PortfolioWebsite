@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معاينة - Portfolio Template</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%);
+            color: white;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #f4b400, #8e24aa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #b0b0b0;
+            font-size: 1.2rem;
+        }
+
+        .card {
+            background: #1a1a1a;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #f4b400;
+            transform: translateY(-5px);
+        }
+
+        .card h2 {
+            color: #f4b400;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .card p {
+            color: #b0b0b0;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .steps {
+            display: grid;
+            gap: 20px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #f4b400, #8e24aa);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            color: #f4b400;
+            margin-bottom: 8px;
+        }
+
+        .step-content p {
+            color: #b0b0b0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #f4b400, #ffd54f);
+            color: #0d0d0d;
+            padding: 15px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(244, 180, 0, 0.4);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .feature h4 {
+            color: #f4b400;
+            margin-bottom: 10px;
+        }
+
+        .alert {
+            background: #2d1b00;
+            border-left: 4px solid #f4b400;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .alert h3 {
+            color: #f4b400;
+            margin-bottom: 10px;
+        }
+
+        .new-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #e74c3c, #f39c12);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        code {
+            background: #0d0d0d;
+            padding: 2px 8px;
+            border-radius: 5px;
+            color: #f4b400;
+            font-family: 'Courier New', monospace;
+        }
+
+        .color-examples {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .color-box {
+            background: #222;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .color-preview {
+            width: 100%;
+            height: 60px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .icon-box {
+            background: #222;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .icon-box i {
+            font-size: 2rem;
+            color: #f4b400;
+            margin-bottom: 8px;
+            display: block;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🎨 Portfolio Template</div>
+            <p class="subtitle">تصميم احترافي من Syntax Academy</p>
+        </div>
+
+        <div class="card">
+            <h2>✨ مرحباً بك في قالب Portfolio الاحترافي!</h2>
+            <p>هذا القالب مصمم خصيصاً للفريلانسرز اللي عايزين يعرضوا أعمالهم بشكل احترافي وجذاب.</p>
+            <p>التصميم يدعم تخصيص كامل للألوان والأيقونات عشان يناسب أسلوبك الخاص! 🎨</p>
+        </div>
+
+        <div class="card">
+            <h2><span class="new-badge">جديد!</span> 🎨 تخصيص الألوان والأيقونات</h2>
+            <p>دلوقتي تقدر تغير ألوان الموقع وأيقونات الخدمات بالكامل!</p>
+            
+            <h3 style="color: #f4b400; margin-top: 25px; margin-bottom: 15px;">تغيير الألوان:</h3>
+            <p>افتح <code>index.html</code> ودور على:</p>
+            <code style="display: block; padding: 15px; margin: 15px 0;">
+"colors": {<br>
+&nbsp;&nbsp;"primary": "#f4b400",<br>
+&nbsp;&nbsp;"secondary": "#8e24aa"<br>
+}
+            </code>
+            
+            <div class="color-examples">
+                <div class="color-box">
+                    <div class="color-preview" style="background: linear-gradient(135deg, #2ecc71, #3498db);"></div>
+                    <strong>تقني</strong>
+                    <p style="font-size: 0.85rem;">#2ecc71<br>#3498db</p>
+                </div>
+                <div class="color-box">
+                    <div class="color-preview" style="background: linear-gradient(135deg, #e74c3c, #9b59b6);"></div>
+                    <strong>جريء</strong>
+                    <p style="font-size: 0.85rem;">#e74c3c<br>#9b59b6</p>
+                </div>
+                <div class="color-box">
+                    <div class="color-preview" style="background: linear-gradient(135deg, #f39c12, #e67e22);"></div>
+                    <strong>دافئ</strong>
+                    <p style="font-size: 0.85rem;">#f39c12<br>#e67e22</p>
+                </div>
+                <div class="color-box">
+                    <div class="color-preview" style="background: linear-gradient(135deg, #8e44ad, #3498db);"></div>
+                    <strong>عصري</strong>
+                    <p style="font-size: 0.85rem;">#8e44ad<br>#3498db</p>
+                </div>
+            </div>
+
+            <h3 style="color: #f4b400; margin-top: 25px; margin-bottom: 15px;">تغيير الأيقونات:</h3>
+            <p>في كل خدمة، غير الـ <code>icon</code>:</p>
+            <code style="display: block; padding: 15px; margin: 15px 0;">
+"icon": "fa-laptop-code"
+            </code>
+            
+            <p style="margin-top: 15px; margin-bottom: 10px;"><strong>أيقونات شائعة:</strong></p>
+            <div class="icon-grid">
+                <div class="icon-box">
+                    <i class="fas fa-laptop-code"></i>
+                    fa-laptop-code
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-palette"></i>
+                    fa-palette
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-mobile-screen"></i>
+                    fa-mobile-screen
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-chart-line"></i>
+                    fa-chart-line
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-video"></i>
+                    fa-video
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-pen-fancy"></i>
+                    fa-pen-fancy
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-lightbulb"></i>
+                    fa-lightbulb
+                </div>
+                <div class="icon-box">
+                    <i class="fas fa-rocket"></i>
+                    fa-rocket
+                </div>
+            </div>
+            <p style="margin-top: 15px; font-size: 0.9rem;">ابحث عن المزيد: <a href="https://fontawesome.com/icons" target="_blank" style="color: #f4b400;">fontawesome.com/icons</a></p>
+        </div>
+
+        <div class="card">
+            <h2>🚀 خطوات البدء</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>افتح الملف</h3>
+                        <p>افتح <code>index.html</code> بأي Text Editor (VS Code, Notepad++)</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>عدل البيانات</h3>
+                        <p>دور على <code>const configData = {</code> وغير الألوان، الاسم، الخدمات، المشاريع</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>احفظ وافتح</h3>
+                        <p>احفظ الملف واضغط عليه دبل كليك - الموقع هيفتح! 🎉</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>💎 المميزات</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🎨</div>
+                    <h4>ألوان قابلة للتخصيص</h4>
+                    <p>غير الألوان زي ما تحب</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎯</div>
+                    <h4>أيقونات مخصصة</h4>
+                    <p>اختار أيقونة لكل خدمة</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h4>متجاوب تماماً</h4>
+                    <p>يعمل على كل الأجهزة</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⚡</div>
+                    <h4>سهل التعديل</h4>
+                    <p>بدون خبرة برمجية</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📁 الملفات المطلوبة</h2>
+            <p><code>index.html</code> - الملف الرئيسي (كل شيء فيه!) ⭐</p>
+            <p><code>styles.css</code> - ملف التصميم والألوان</p>
+        </div>
+
+        <div class="alert">
+            <h3>✨ الصور من الإنترنت مباشرة!</h3>
+            <p>الموقع بيستخدم صور من الإنترنت مباشرة، مش محتاج تحمل صور! 🎉</p>
+            <p>استخدم Unsplash أو Pexels وانسخ رابط الصورة:</p>
+            <code style="display: block; margin-top: 10px;">"image": "https://images.unsplash.com/photo-123456..."</code>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="index.html" class="btn">📂 شاهد الموقع الآن</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; color: #666;">
+            <p>🎓 تم التصميم بواسطة <strong style="color: #f4b400;">Syntax Academy</strong></p>
+        </div>
+    </div>
+</body>
+</html>
