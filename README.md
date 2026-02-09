@@ -423,8 +423,7 @@ If you found this template helpful, please consider:
 
 <div align="center">
 
-### Built with ❤️ by Syntax Academy
-
+### Built with ❤️ by Youssef Jamil
 **Make it yours. Make it awesome.** 🚀
 
 </div>
