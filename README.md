@@ -397,15 +397,15 @@ Contributions are welcome! If you have ideas for improvements:
 
 Need help? Have questions?
 
-- 📧 Email: support@syntaxacademy.com
-- 💬 Issues: [GitHub Issues](https://github.com/yourusername/portfolio-template/issues)
+- 📧 Email: youssefjamelabdullatif@gmail.com
+- 💬 Issues: [GitHub Issues](https://github.com/youssef-jamil/portfolio-template/issues)
 - 📚 Documentation: Check `PREVIEW.html` for visual guide
 
 ---
 
 ## 🎓 Credits
 
-**Created by**: Syntax Academy  
+**Created by**: Youssef Jamil 
 **Version**: 2.0  
 **Last Updated**: February 2026
 
